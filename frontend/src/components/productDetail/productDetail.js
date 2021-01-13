@@ -31,7 +31,6 @@ const ProductDetail = (props) => {
                     setIsLoading(false);
                 });
     }, [id]);
-console.log(item)
     const getPrice = (p) => {
         let price = '';
         if(p.currency === 'ARS') {

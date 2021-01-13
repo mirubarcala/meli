@@ -5,7 +5,9 @@
     height      :$header ;
     background  : $yellow ;
     @include flexbox( center, center, row);
-
+    @include devices {
+        @include flexbox( flex-start, center, row)
+    }
     img{
         width: 3rem;
         height: 2rem;
@@ -19,7 +21,10 @@
             width: 55rem;
             font-family: $fontfamily;
             height: 100%;
-            padding: 0.5rem
+            padding: 0.5rem;
+            @include devices {
+                width: 10rem;
+            }
     }
         input::placeholder{
             color: rgba(0, 0, 0, 0.2);

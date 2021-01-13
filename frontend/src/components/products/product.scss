@@ -1,11 +1,17 @@
 @import "../../index.scss";
 
 #product{
+    
     font-family: $fontfamily;
     width: $main;
     height: 15rem;
     background: white;
     @include flexbox($dir: row);
+    @include devices{
+        width: 19rem;
+        height: 10rem;
+    };
+
     >a{
         width: 20%;
         height: 100%;
@@ -13,6 +19,11 @@
             width: 100%;
             height: 12rem;
             padding: 1rem;
+            @include devices{
+                width: 4rem;
+                height: 4rem;
+                align-self: center;
+            };
         }
 
     }
@@ -23,11 +34,15 @@
             width: 60%;
             @include flexbox($ai: flex-start, $jc: flex-start);
             padding: 2rem 1rem;
-            >h1{
-                font-size: 2rem;
-                margin: 1rem 0rem;
-                @include flexbox($dir: row);
-                display: flex;
+                >h1{
+                    font-size: 2rem;
+                    margin: 1rem 0rem;
+                    @include flexbox($dir: row);
+                    display: flex;
+                    @include devices{
+                        font-size: 1rem
+                    }
+            
                 >div{
                     width: 1.5rem;
                     height: 1.5rem;
@@ -42,8 +57,17 @@
                     }
                 }
             }
-            >h2{
-                font-size: 1rem;
+            >a{
+                >h2{
+                    font-size: 1rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    @include devices{
+                        font-size: 0.8rem
+                    }
+            }
+ 
 
             }
         }

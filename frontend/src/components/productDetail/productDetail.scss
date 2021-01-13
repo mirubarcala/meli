@@ -8,19 +8,29 @@
     padding-bottom: 3rem;
     background: #EEEEEE;
     @include flexbox($jc: flex-start);
+
     .detail{
         width: $main;
         background: white;
         height: 100%;
+        @include devices{
+            width: 100vw;
+        }
         >div{
             &:first-child{
                 @include flexbox($dir: row, $jc: space-between);
+                @include devices{
+                    @include flexbox($dir: column)
+                }
                 height: 30rem;
                 padding: 3rem;
-
                 >img{
                     width: 60%;
                     height: 100%;
+                    @include devices{
+                        width: 5rem;
+                        height: 5rem;
+                    }
                 }
                 >div{
                     align-self: flex-start;
@@ -31,9 +41,15 @@
                     >h1{
                         
                         font-size: 2rem;
+                        @include devices{
+                            font-size: 0.8rem;
+                        }
                     }
                     >h2{
                         font-size: 3rem;
+                        @include devices{
+                            font-size: 1rem;
+                        }
                     }
                     >button{
                         margin-top: 3rem;

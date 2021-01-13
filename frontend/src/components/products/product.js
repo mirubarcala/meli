@@ -3,11 +3,6 @@ import './product.scss';
 import { ReactComponent as Ship } from '../../img/ship.svg'
 import { Link } from 'react-router-dom';
 
-
-/*import classes from './Item.module.css';
-import { formatAsCurrency } from '../../../../utils/helpers';
-import shippingIcon from '../../../../assets/images/free-shipping.png'; */
-
 const Product = (props) => {
      const getPrice = () => {
         let price = '';
@@ -25,12 +20,19 @@ const Product = (props) => {
 
     return (
         <div id="product">
-   <Link to={link}>  <img src={props.item.picture} alt="Item"/>  </Link>  
+            <Link to={link}>    
+                <img src={props.item.picture} alt="Item"/>  
+            </Link>  
            <div> 
-               <h1> {getPrice()}
-                   {props.item.free_shipping ? ( <div><Ship/></div> ) : null}
-                </h1>
-               <h2> {props.item.title}</h2>
+ 
+                    <h1> {getPrice()}
+                        {props.item.free_shipping ? ( <div><Ship/></div> ) : null}
+                    </h1>
+       
+                <Link to={link}> 
+                   <h2> {props.item.title}</h2>
+                </Link> 
+  
 
            </div>
            <div>

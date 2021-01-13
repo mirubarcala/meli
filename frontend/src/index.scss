@@ -6,14 +6,8 @@
     src: url('./fonts/roboto/Roboto-Light.ttf') format('ttf')
 }
 
-
-
-
 //fonts
 $fontfamily: "Roboto";
-
-
-
 
 // COLORS 
 $yellow             :#FFF159;
@@ -287,30 +281,3 @@ $lc: $c,
   @include loading_spinner()
 }
 
-#notFound{
-  font-family: $fontfamily;
-  width: $main;
-  height: 10rem;
-  background: white;
-  margin: 2rem  0 ;
-  @include flexbox($dir: row);
-  >div{
-      height: 100%;
-      &:first-child{
-          @include flexbox;
-          width:  30%;
-          >svg{
-              width: 5rem;
-              height: 5rem;
-          }
-      }
-      &:last-child{
-          width: 70%;
-          @include flexbox;
-          >h1{
-              font-size: 1.5rem;
-          }
-      }
-  }
-
-}
