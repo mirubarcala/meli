@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+#productList{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 3rem;
+    background: #EEEEEE;
+    @include flexbox($jc: flex-start);
+}
+
+

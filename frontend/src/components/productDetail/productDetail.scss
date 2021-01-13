@@ -1,0 +1,69 @@
+@import '../../index.scss';
+
+#productDetail{
+    font-family: $fontfamily;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 3rem;
+    background: #EEEEEE;
+    @include flexbox($jc: flex-start);
+    .detail{
+        width: $main;
+        background: white;
+        height: 100%;
+        >div{
+            &:first-child{
+                @include flexbox($dir: row, $jc: space-between);
+                height: 30rem;
+                padding: 3rem;
+
+                >img{
+                    width: 60%;
+                    height: 100%;
+                }
+                >div{
+                    align-self: flex-start;
+                    width: 30%;
+                    >h1, h2, button{
+                        margin: 0.5rem 0;
+                    }
+                    >h1{
+                        
+                        font-size: 2rem;
+                    }
+                    >h2{
+                        font-size: 3rem;
+                    }
+                    >button{
+                        margin-top: 3rem;
+                        @include flexbox;
+                        width: 100%;
+                        height: 2.5rem;
+                        background-color: $lightBlue;
+                        color: white;
+                        cursor: pointer;
+                        border-radius: 6px;
+                        transition: background-color .2s ease-in; 
+                        &:hover{
+                            background-color: #2968C8;
+                        }
+                    }
+
+
+                }
+            }
+            &:last-child{
+                padding: 3rem;
+                >h1{
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+                }
+
+
+            }
+        }
+    }
+  
+
+}

@@ -1,0 +1,9 @@
+@import '../../index.scss';
+
+#breadcrumb{
+    font-family: $fontfamily;
+    width: $main;
+    @include flexbox($dir:row, $ai: flex-start, $jc: flex-start);
+    padding: 2rem 0;
+    color: #859697
+}
